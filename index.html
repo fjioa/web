@@ -3,113 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netlifyへようこそ！</title>
+    <title>『好き』の正体がわかる本 〜恋の「なぜ？」を心理学で解き明かす〜</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 基本的なデザイン設定 */
-        :root {
-            --primary-color: #00c7b7; /* Netlifyのテーマカラー */
-            --text-color: #333;
-            --bg-color: #f4f7f6;
-            --container-bg: #ffffff;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background-color: #FDF2F8; /* Very light pink background */
         }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: var(--container-bg);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
+        .gradient-text {
+            background: linear-gradient(90deg, #EC4899, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
+        .accordion-header svg {
+            transition: transform 0.3s ease;
         }
-
-        p {
-            font-size: 1.1rem;
-        }
-
-        .lead {
-            font-size: 1.25rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            display: inline-block;
-            margin-top: 30px;
-        }
-
-        li {
-            background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%2300c7b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
-
-        a.button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 25px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        a.button:hover {
-            background-color: #00a395;
-        }
-        
-        footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #888;
+        .accordion-header.open svg {
+            transform: rotate(180deg);
         }
     </style>
 </head>
-<body>
+<body class="text-gray-800">
 
-    <div class="container">
-        <h1>🚀 Netlifyでの公開に成功しました！</h1>
-        
-        <p class="lead">
-            このページはNetlifyを使って、世界中に公開されています。<br>
-            デプロイは驚くほど簡単だったはずです！
-        </p>
+    <!-- Header Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-lg md:text-xl font-bold gradient-text">『好き』の正体がわかる本</h1>
+            <a href="#purchase" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">今すぐ読む</a>
+        </div>
+    </header>
 
-        <h2>次は何をしますか？</h2>
-        <ul>
-            <li>この <strong>index.html</strong> ファイルを編集して内容を変えてみましょう。</li>
-            <li>新しいHTMLファイル（例: `about.html`）を追加してみましょう。</li>
-            <li>CSSを編集して、見た目をカスタマイズしてみましょう。</li>
-            <li>取得した独自ドメインを設定してみましょう。</li>
-        </ul>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-12 md:py-20 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                その「好き」の正体、<br class="md:hidden">知りたくない？
+            </h2>
+            <p class="mt-4 text-lg md:text-xl text-pink-700 font-semibold">恋の「なぜ？」を心理学で解き明かす</p>
+            <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="w-64 md:w-80 flex-shrink-0">
+                    <img src="https://placehold.co/600x800/EC4899/FFFFFF?text=%E3%80%8E%E5%A5%BD%E3%81%8D%E3%80%8F%E3%81%AE%0A%E6%AD%A3%E4%BD%93%E3%81%8C%0A%E3%82%8F%E3%81%8B%E3%82%8B%E6%9C%AC" alt="書籍『好き』の正体がわかる本 の表紙" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="md:text-left max-w-lg">
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        「一目惚れってなんで起きるの？」「気づいたら好きになってたのはなぜ？」<br>
+                        恋愛はセンスや才能じゃない。ほんの少しの心理学の知識で、あなたの恋はもっと楽しく、うまくいくようになる。<br><br>
+                        10代〜20代の悩めるすべての人に贈る、「恋の教科書」がここに誕生。
+                        SNSやマッチングアプリ時代の新しい恋にも完全対応。自信を持って、前向きな一歩を踏み出そう！
+                    </p>
+                    <a href="#purchase" class="mt-8 inline-block bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                        電子書籍版をチェック
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <a href="https://docs.netlify.com/" class="button" target="_blank" rel="noopener noreferrer">
-            Netlifyのドキュメントを読む
-        </a>
-        
-        <footer>
-            <p>このサンプルページはNetlifyでホストされています。</p>
-        </footer>
-    </div>
+        <!-- Features Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">この本でわかること</h3>
+                    <p class="text-pink-600 mt-2">あなたの恋の悩みに、心理学が答えます</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-pink-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-xl text-pink-700">恋が始まる心の仕組み</h4>
+                        <p class="mt-2 text-gray-600">一目惚れ、吊り橋効果など、恋に落ちるメカニズムをわかりやすく解説。</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-xl text-purple-700">出会いから関係維持まで</h4>
+                        <p class="mt-2 text-gray-600">LINEテクニックから告白のタイミングまで、明日から使える実践的なヒントが満載。</p>
+                    </div>
+                    <div class="bg-rose-50 p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-xl text-rose-700">現代の恋愛の悩み解決</h4>
+                        <p class="mt-2 text-gray-600">失恋からの立ち直り方、SNSとの付き合い方など、リアルな悩みに答えます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Table of Contents Section -->
+        <section id="toc" class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-900">目次</h3>
+                <p class="text-purple-600 mt-2">気になる章をタップして内容をチェック！</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- Accordion Item: 序章 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center">
+                        <h4 class="font-bold text-lg text-gray-800">序章：はじめに -「恋の教科書」を、キミに。</h4>
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content hidden p-5 border-t border-gray-200">
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>恋愛は「センス」や「才能」だと思っていませんか？</li>
+                            <li>心理学で、恋はもっと面白くなる</li>
+                            <li>現代の恋にも完全対応！</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accordion Item: 第1部 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center">
+                        <h4 class="font-bold text-lg text-gray-800">第1部：基礎編 - そもそも「好き」って何？ 恋が始まる心のメカニズム</h4>
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content hidden p-5 border-t border-gray-200">
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>Chapter 1：一目惚れの正体は「脳のバグ」だった！？ (`ハロー効果`)</li>
+                            <li>Chapter 2：なぜか気になる…「気づいたら好き」の作り方 (`単純接触効果`)</li>
+                            <li>Chapter 3：「ギャップ萌え」を科学する (`ゲインロス効果`)</li>
+                            <li>Chapter 4：自分と「似てる人」と「真逆の人」、本当に惹かれるのはどっち？ (`類似性の法則`, `相補性`)</li>
+                            <li>Chapter 5：「ドキドキ」が「好き」にすり替わる瞬間 (`吊り橋効果`)</li>
+                            <li>Chapter 6：尽くされるより「尽くした」方が好きになる？ (`好意の返報性`)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accordion Item: 第2部 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center">
+                        <h4 class="font-bold text-lg text-gray-800">第2部：実践編 - 「好き」を育てて「幸せ」になる。</h4>
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content hidden p-5 border-t border-gray-200">
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                           <li>STEP 1：出会いを科学する【初対面編】</li>
+                           <li>STEP 2：距離を縮めるアプローチ【関係進展編】</li>
+                           <li>STEP 3：「好き」を伝える【告白編】</li>
+                           <li>STEP 4：最高の関係を長続きさせる【交際編】</li>
+                           <li>【コラム】マッチングアプリ完全攻略</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item: 第3部 -->
+                 <div class="bg-white rounded-lg shadow-md">
+                    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center">
+                        <h4 class="font-bold text-lg text-gray-800">第3部：悩み解決編 - もう悩まない！恋愛の「困った…」を解決する心理学Q&A</h4>
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="accordion-content hidden p-5 border-t border-gray-200">
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                           <li>CASE 1：【片思いの悩み】</li>
+                           <li>CASE 2：【失恋の悩み】</li>
+                           <li>CASE 3：【交際中の悩み】</li>
+                           <li>CASE 4：【恋愛全般の悩み】</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Accordion Item: 終章 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center">
+                        <h4 class="font-bold text-lg text-gray-800">終章：おわりに - 最高の恋をするために、一番大切なこと</h4>
+                        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                     <div class="accordion-content hidden p-5 border-t border-gray-200">
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li>恋愛心理学は、相手を操るための「魔法」ではない</li>
+                            <li>すべての恋の始まりは「自分を好きになる」こと (`自己肯定感`)</li>
+                            <li>キミの恋が、最高の物語になるように</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="purchase" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <h3 class="text-3xl md:text-4xl font-bold">
+                    <span class="gradient-text">今こそ、恋の悩みを卒業しよう。</span>
+                </h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-700">
+                    もう一人で悩まないで。心理学という最強の味方と一緒に、自信に満ちた新しい自分に出会おう。
+                    あなたの恋が、最高の物語になるための第一歩を、ここから踏み出してみませんか？
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="inline-block bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Amazon Kindleで読む
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">その他、各電子書籍ストアで配信中！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 『好き』の正体がわかる本 製作委員会. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // JavaScript for Accordion
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    
+                    // Toggle visibility of the content
+                    content.classList.toggle('hidden');
+                    
+                    // Toggle open class for arrow rotation
+                    this.classList.toggle('open');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
